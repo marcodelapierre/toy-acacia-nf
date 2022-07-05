@@ -1,0 +1,4 @@
+.nextflow*
+work/*
+output_*
+slurm-*.out
