@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Suitable for installations on personal computers (laptop, workstation, cloud)
+# Suitable for installations on Setonix
 
 # Assumes relevant input files are already on the S3 object store
 
