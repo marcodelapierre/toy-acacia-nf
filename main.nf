@@ -3,6 +3,9 @@
 //params.input='s3://pawsey0001-marco-personal/input_user_s3'
 params.input='s3://pawsey0001-marco-store/input_project_s3'
 
+// just a way to generate directory and name for the output file
+// assumes params.input contains both directory and name
+// e.g. './input' works, whereas 'input' does not
 arr=params.input.split("/",-1)
 params.outdir=params.input-arr[arr.size()-1]
 params.outfile=arr[arr.size()-1].replace('input','output')
