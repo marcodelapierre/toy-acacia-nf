@@ -13,5 +13,5 @@ export NXF_ENABLE_SECRETS=true
 nextflow -C secrets.config run main.nf
 
 # Case 2. use non-default NF params.input and non-default S3 profile
-nextflow -C secrets.config run main.nf \
+nextflow -C secrets.config run -profile aws_project main.nf \
   --input='s3://pawsey0001-marco-store/input_project_s3'
