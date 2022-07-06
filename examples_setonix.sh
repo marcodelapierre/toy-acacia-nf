@@ -4,6 +4,10 @@
 
 # Assumes relevant input files are already on the S3 object store
 
+# Load Nextflow and AWScli in the shell
+module load nextflow/22.04.3
+module load awscli/1.16.308
+
 
 # Case 1. use default NF params.input and default S3 profile
 nextflow run main.nf
