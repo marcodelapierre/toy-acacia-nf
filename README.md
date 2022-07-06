@@ -1,6 +1,7 @@
 ## Toy pipeline to test Nextflow with Acacia at Pawsey
 
-Acacia is the brand new S3 Object Storage on-premises service at Pawsey, based on CEPH software libraries and deployed in 2022.
+Acacia is the brand new S3 Object Storage on-premises service at Pawsey, based on CEPH software libraries and deployed in 2022.  
+For information on usage, see the [Acacia User Guide](https://support.pawsey.org.au/documentation/display/US/Acacia+-+User+Guide) in the Pawsey User Documentation.
 
 
 ### Software requirements
@@ -40,8 +41,8 @@ AWS_PROFILE='non-default-profile' nextflow run main.nf <..>
 With the requirements above being satisfied, the pipeline can use S3 objects as input:
 ```
 params.input='s3://<bucket>/<input-file>'
-
 ```
+
 and as output directory ,too:
 ```
 publishDir 's3://<bucket>/', mode: 'copy', saveAs: { '<output-file>' }
