@@ -14,4 +14,4 @@ nextflow -C secrets.config run main.nf
 
 # Case 2. use non-default NF params.input and non-default NF profile
 nextflow -C secrets.config run -profile aws_project main.nf \
-  --input='s3://pawsey0001-marco-store/input_project_s3'
+  --input='s3://pawsey0001-marco-setonix/input_project_s3'

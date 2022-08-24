@@ -13,8 +13,8 @@ module load awscli/1.16.308
 nextflow run main.nf
 
 # Case 2. use non-default NF params.input and non-default S3 profile
-AWS_PROFILE='pawsey0001' nextflow run main.nf \
-  --input='s3://pawsey0001-marco-store/input_project_s3'
+AWS_PROFILE='acacia-pawsey0001' nextflow run main.nf \
+  --input='s3://pawsey0001-marco-setonix/input_project_s3'
 
 # Case 3. use local (non S3) params.input
 nextflow run main.nf \
