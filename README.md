@@ -57,6 +57,23 @@ Some example scripts are provided:
 * `examples_setonix.sh`: bash script for Setonix (loads modules for `nextflow` and `aws`)
 
 
+### Updated configuration for profiles
+
+Nextflow version `22.12.0-edge` implements a new configuration option to choose the AWS profile, `aws.profile`.  In this way, setting of the variable `AWS_PROFILE`, as described above, is not required any more.
+
+The updated pipeline configuration looks as follows:
+
+```
+aws {
+  profile = "non-default-profile"
+  client {
+    s3PathStyleAccess = true
+    endpoint = "https://acacia.pawsey.org.au"
+  }
+}
+```
+
+
 ### Alternative configuration using Nextflow Secrets
 
 This alternate method makes us of [Nextflow Secrets](https://nextflow.io/docs/latest/secrets.html), a beta feature, instead of AWS Credentials.
