@@ -5,11 +5,19 @@
 # Assumes relevant input files are already on the S3 object store
 
 
+
+
+
+
 # Case 1. use default NF params.input and default S3 profile
 nextflow run main.nf
 
 # Case 2. use non-default NF params.input and non-default S3 profile
 AWS_PROFILE='acacia-pawsey0001' nextflow run main.nf \
+  --input='s3://pawsey0001-marco-setonix/input_project_s3'
+
+# Case 2.b with config.aws.profile (nf v22.12.0-edge)
+nextflow -C profile.config run main.nf \
   --input='s3://pawsey0001-marco-setonix/input_project_s3'
 
 # Case 3. use local (non S3) params.input

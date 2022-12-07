@@ -8,6 +8,7 @@ For information on usage, see the [Acacia User Guide](https://support.pawsey.org
 
 The pipeline requires the following software to run:
 * [Nextflow](https://github.com/nextflow-io/nextflow) to orchestrate the pipeline.  The minimum required version is `22.04.00`, as DSL2 syntax is assumed to be default
+  * To run the examples using `config.aws.profile`, the minimum version is `22.12.00-edge`
 * [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli) to interact with S3 object storage
 
 The setup also requires the following:

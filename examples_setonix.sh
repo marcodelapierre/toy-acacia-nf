@@ -16,6 +16,10 @@ nextflow run main.nf
 AWS_PROFILE='acacia-pawsey0001' nextflow run main.nf \
   --input='s3://pawsey0001-marco-setonix/input_project_s3'
 
+
+
+
+
 # Case 3. use local (non S3) params.input
 nextflow run main.nf \
   --input='inputs/input_local'
