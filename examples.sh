@@ -16,10 +16,15 @@ nextflow run main.nf
 AWS_PROFILE='acacia-pawsey0001' nextflow run main.nf \
   --input='s3://pawsey0001-marco-setonix/input_project_s3'
 
-# Case 2.b with config.aws.profile (nf v22.12.0-edge)
+# Case 2.b with config.aws.profile (requires nf v22.12.0-edge or later)
 nextflow -C profile.config run main.nf \
   --input='s3://pawsey0001-marco-setonix/input_project_s3'
 
 # Case 3. use local (non S3) params.input
 nextflow run main.nf \
   --input='inputs/input_local'
+=
+# Case 4. use Fusion FS (requires v22.10.0 or later)
+ export AWS_ACCESS_KEY_ID=
+ export AWS_SECRET_ACCESS_KEY=
+nextflow -C fusion.config run main.nf
