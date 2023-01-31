@@ -23,8 +23,8 @@ nextflow -C profile.config run main.nf \
 # Case 3. use local (non S3) params.input
 nextflow run main.nf \
   --input='inputs/input_local'
-=
+
 # Case 4. use Fusion FS (requires v22.10.0 or later)
- export AWS_ACCESS_KEY_ID=
- export AWS_SECRET_ACCESS_KEY=
+  export AWS_ACCESS_KEY_ID=
+  export AWS_SECRET_ACCESS_KEY=
 nextflow -C fusion.config run main.nf
