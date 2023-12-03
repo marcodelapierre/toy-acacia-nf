@@ -33,7 +33,7 @@ nextflow run main.nf \
 AWS_ACCESS_KEY_ID="" \
   AWS_SECRET_ACCESS_KEY="" \
   nextflow run main.nf \
-  -profile standard,fusion
+  -profile fusion
 
 
 # Use Nextflow Secrets instead of AWS Credentials
