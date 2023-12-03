@@ -14,7 +14,7 @@ nextflow run main.nf
 
 # Case 2. use non-default NF params.input and non-default S3 profile
 AWS_PROFILE='acacia-pawsey0001' nextflow run main.nf \
-  --input='s3://pawsey0001-marco-setonix/input_project_s3'
+  --input='s3://pawsey0001-marco-setonix/input_project_acacia'
 
 
 
