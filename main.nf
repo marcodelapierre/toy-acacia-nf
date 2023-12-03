@@ -3,11 +3,14 @@
 params.input='s3://pawsey0001-marco-personal/input_user_acacia'
 
 // just a way to generate directory and name for the output file
-// assumes params.input contains both directory and name
-// e.g. './input' works, whereas 'input' does not
-arr=params.input.split("/",-1)
-params.outdir=params.input-arr[arr.size()-1]
-params.outfile=arr[arr.size()-1].replace('input','output')
+arr = params.input.split("/",-1)
+input_element = arr[arr.size()-1]
+if ( arr.size() > 1 ) {
+  params.outdir = params.input - input_element
+} else {
+  params.outdir = '.'
+}
+params.outfile = 'output' + input_element.replace('input','')
 
 
 process analyse {
