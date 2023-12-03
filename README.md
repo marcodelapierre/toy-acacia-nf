@@ -55,6 +55,7 @@ Some example scripts are provided:
 * `nextflow.config`: configuration file
 * `examples.sh`: bash script for personal setup (laptop/workstation/cloud)
 * `examples_setonix.sh`: bash script for Setonix (loads modules for `nextflow` and `aws`)
+* `examples_secrets.sh`: bash script using secrets (see below)
 
 
 ### Updated configuration for profiles
@@ -100,8 +101,3 @@ export NXF_ENABLE_SECRETS=true
 A pair of secrets is needed for each S3 account.  Hence, if multiple accounts are used, multiple secrets have to be provided.  At the pipeline level, this can be managed for instance using configuration profiles.
 
 See [Nextflow Secrets](https://nextflow.io/docs/latest/secrets.html) for information on how to setup Nextflow Secrets.
-
-There are some example files for this scenario, too:
-* `secrets.config`: modified configuration file, with secrets and profiles
-* `examples_secrets.sh`: bash script using secrets
-
