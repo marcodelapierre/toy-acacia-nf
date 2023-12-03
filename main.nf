@@ -1,7 +1,6 @@
 #!/usr/bin/env nextflow
 
 params.input='s3://pawsey0001-marco-personal/input_user_acacia'
-//params.input='s3://pawsey0001-marco-setonix/input_project_acacia'
 
 // just a way to generate directory and name for the output file
 // assumes params.input contains both directory and name
