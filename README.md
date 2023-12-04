@@ -77,7 +77,7 @@ aws {
 
 ### Alternative configuration using Nextflow Secrets
 
-This alternate method makes us of [Nextflow Secrets](https://nextflow.io/docs/latest/secrets.html), a beta feature, instead of AWS Credentials.
+This alternate method makes us of [Nextflow Secrets](https://nextflow.io/docs/latest/secrets.html), a new feature.
 
 The configuration file requires:
 
@@ -90,12 +90,6 @@ aws {
   accessKey = secrets.<account-key-name>
   secretKey = secrets.<account-secret-name>
 }
-```
-
-At runtime, an additional environment variable is required to enable the Secrets feature:
-
-```
-export NXF_ENABLE_SECRETS=true
 ```
 
 A pair of secrets is needed for each S3 account.  Hence, if multiple accounts are used, multiple secrets have to be provided.  At the pipeline level, this can be managed for instance using configuration profiles.
